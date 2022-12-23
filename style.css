@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+html {
+  font-size: 16px;
+}
+
+body {
+  background: #EFF5F9;
+  color: #728C98;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.device {
+  background: #F7FBFD;
+  border-radius: 2.4rem;
+  box-shadow: 2rem 2rem 8rem rgba(78, 134, 165, 0.09), 1rem 1rem 4rem rgba(78, 134, 165, 0.09), inset 4rem 4rem 10rem rgba(78, 134, 165, 0.05);
+  height: 44rem;
+  width: 24rem;
+  overflow: hidden;
+}
+
+.device__top {
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 60%;
+  position: relative;
+  overflow: hidden;
+}
+
+.album-art {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  position: absolute;
+}
+
+.device__mid {
+  flex: 1;
+}
+
+.info {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  padding: 1rem 1.5rem;
+  line-height: 0.6rem;
+}
+
+.info__song {
+  font-weight: 700;
+  margin: 0;
+}
+.info__song h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+.info__playlist {
+  color: #AEBEC6;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.progress {
+  margin: 2rem 2rem;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.4rem;
+}
+
+.controls__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: #728C98;
+  background: #e8f0f6;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.controls__button:hover {
+  background: #cadeeb;
+  color: #5b727c;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  outline: none;
+  background: #e4e9ec;
+  border: none;
+  height: 8px;
+  border-radius: 4px;
+  transition: opacity 0.2s;
+  background-image: linear-gradient(#49C6FF, #49C6FF);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #49C6FF;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb:active {
+  border: 2px solid #49C6FF;
+  background: #AEBEC6;
+}/*# sourceMappingURL=style.css.map */

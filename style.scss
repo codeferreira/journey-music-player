@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$palest: #F7FBFD;
+$pale: #EFF5F9;
+$mid: #AEBEC6;
+$base: #728C98;
+$shade: #4E86A5;
+$bright: #49C6FF;
+$glow: lighten($bright, 10%);
+
+$baseFontSize: 16px;
+
+html {
+  font-size: $baseFontSize;
+}
+
+body {
+  background: $pale;
+  color: $base;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.device {
+  background: $palest;
+  border-radius: 2.4rem;
+  box-shadow: 2rem 2rem 8rem rgba($shade, 0.09), 1rem 1rem 4rem rgba($shade, 0.09), inset 4rem 4rem 10rem rgba($shade, 0.05);
+  height: 44rem;
+  width: 24rem;
+  overflow: hidden;
+}
+
+.device__top {
+  background-color: rgba($color: #FFF, $alpha: 0.6);
+  height: 60%;
+  position: relative;
+  overflow: hidden;
+}
+
+.album-art {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  position: absolute;
+}
+
+.device__mid {
+  flex: 1;
+}
+
+.info {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  padding: 1rem 1.5rem;
+  line-height: 0.6rem;
+}
+
+.info__song {
+  font-weight: 700;
+  margin: 0;
+
+  & h2 {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.info__playlist {
+  color: $mid;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.progress {
+  margin: 2rem 2rem;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.4rem;
+}
+
+.controls__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+
+  border: none;
+  border-radius: 50%;
+
+  font-size: 2rem;
+  color: $base;
+  background: darken($pale, 2%);
+  cursor: pointer;
+
+  transition: all .2s;
+
+  &:hover {
+    background: darken($pale, 10%);
+    color: darken($base, 10%);
+  }
+}
+
+//slider
+input[type=range] {
+  appearance: none;
+  width: 100%;
+  outline: none;
+  background: lighten($mid, 18%);
+  border: none;
+  height: 8px;
+  border-radius: 4px;
+  transition: opacity .2s;
+  background-image: linear-gradient($bright, $bright);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%; 
+  background: $bright;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb:active {
+  border: 2px solid $bright;
+  background: $mid;
+}

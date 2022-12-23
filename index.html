@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reseter.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <script src="./scripts/app.js" type="module" defer></script>
+</head>
+<body>
+  <section class="device">
+    <div class="device__top">
+      <img 
+        id="album-cover"
+        class="album-art" 
+        src="https://i.scdn.co/image/ab67616d0000b27325f49ab23f0ec6332efef432" 
+        alt="album art">
+    </div>
+
+    <div class="device__mid">
+      <section class="info">
+        <hgroup class="info__song">
+          <h1 id="song-name">Bring me to life</h1>
+          <h2>by <span id="artist-name">Evanescence</span></h2>
+        </hgroup>
+        <hgroup class="info__playlist">
+          <h2>
+            <span id="current-song">1</span> of <span id="song-count">3</span>
+          </h2>
+        </hgroup>
+      </section>
+    </div>
+
+    <div class="device__bottom">
+      <div class="progress">
+        <input type="range" name="progress" id="progress-bar" min="0" max="" value="0" />
+        <div class="timer">
+          <p id="current-time">00:00</p>
+          <p id="song-duration">00:00</p>
+        </div>
+        <audio id="track" src=""></audio>
+      </div>
+      <div class="controls">
+        <button id="back-button" class="controls__button">
+          <i class="ph-skip-back-fill"></i>
+        </button>
+        <button id="play-button" class="controls__button">
+          <i class="ph-play-fill"></i>
+        </button>
+        <button id="foward-button" class="controls__button">
+          <i class="ph-skip-forward-fill"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
